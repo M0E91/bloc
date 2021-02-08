@@ -146,8 +146,9 @@ class RoutePage extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          RaisedButton(
+          ElevatedButton(
             key: const Key('route_button'),
+            child: const SizedBox(),
             onPressed: () {
               Navigator.of(context).pushReplacement(
                 MaterialPageRoute<Widget>(
@@ -156,8 +157,9 @@ class RoutePage extends StatelessWidget {
               );
             },
           ),
-          RaisedButton(
+          ElevatedButton(
             key: const Key('increment_buton'),
+            child: const SizedBox(),
             onPressed: () {
               BlocProvider.of<CounterCubit>(context).increment();
             },
@@ -290,8 +292,9 @@ void main() {
                   builder: (context, state) => Column(
                     children: [
                       Text('state: $state'),
-                      RaisedButton(
+                      ElevatedButton(
                         key: const Key('increment_button'),
+                        child: const SizedBox(),
                         onPressed: () {
                           BlocProvider.of<CounterCubit>(context).increment();
                         },
